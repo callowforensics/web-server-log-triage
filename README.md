@@ -7,7 +7,7 @@ also attempts to find SQL injection as well as possible encoded commands
 (base64 etc). It is a requirement to enter the log type, as each web-server
 application has its own intricacies.
 
-optional arguments:
+arguments:
 
   -h, --help            show this help message and exit
   
@@ -29,3 +29,7 @@ optional arguments:
                         the search for commands and pieces them together. Lite
                         mode: Just gives a summary of notable commands found
                         (recommended for searching big logs)
+
+Example:
+
+-i /cases/1234/web_server_logs -o /cases/1234/output -t iis -m full -s search_terms.p

@@ -1,6 +1,6 @@
 # web-server-log-triage
 
-This script recursively searches a user specified folder containing web server
+The web_server_log_triage script recursively searches a user specified folder containing web server
 logs, and finds potentially nefarious commands. The script will locate, and
 decode, plain text URL encoded commands that have been issued to a server; it
 also attempts to find SQL injection as well as possible encoded commands
@@ -33,3 +33,7 @@ arguments:
 Example:
 
 -i /cases/1234/web_server_logs -o /cases/1234/output -t iis -m full -s search_terms.p
+
+Additional Information:
+
+Use the web_server_log_triage_change_regex.py to change the regex that is used by the web_server_log_triage.py script (which is stored within the search_terms.p file)

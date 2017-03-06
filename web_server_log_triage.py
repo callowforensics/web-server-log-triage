@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import argparse
 import os
 import sys
@@ -13,6 +12,14 @@ import platform
 import textwrap
 import shutil
 import pickle
+
+__author__ = "Andrew Callow"
+__copyright__ = "Copyright (C) 2016, HPE ESS"
+__title__ = "web_server_log_triage.py"
+__license__ = "Proprietary"
+__version__ = "1.0"
+__email__ = "acallow@btinternet.com"
+__status__ = "Prototype"
 
 
 def check_args():
@@ -598,6 +605,11 @@ def get_all_logs(ips=None):
 
 # Run the script.
 if __name__ == "__main__":
+    # Exit if he have a non-Linux user (script built for Linux)
+    if platform.system().lower() != "linux":
+        print("\nSorry, this script is designed to work on a Linux system only.")
+        sys.exit()
+        
     description = ("""This script recursively searches a user specified folder containing web server logs,
     and finds potentially nefarious commands. The script will locate, and decode, plain text URL encoded
     commands that have been issued to a server; it also attempts to find SQL injection as well as possible

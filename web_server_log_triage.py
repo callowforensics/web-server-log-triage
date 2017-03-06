@@ -14,14 +14,6 @@ import textwrap
 import shutil
 import pickle
 
-__author__ = "Andrew Callow"
-__copyright__ = "Copyright (C) 2016, HPE ESS"
-__title__ = "web_server_log_triage.py"
-__license__ = "Proprietary"
-__version__ = "1.0"
-__email__ = "acallow@btinternet.com"
-__status__ = "Prototype"
-
 
 def check_args():
     """Checks the arguments.
